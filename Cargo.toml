@@ -1,0 +1,9 @@
+[package]
+name = "rust-wii"
+version = "0.1.0"
+authors = ["daxorinator"]
+edition = "2018"
+links = "MLlib"
+build = "build.rs"
+
+[dependencies]
