@@ -2,15 +2,15 @@
 #![feature(start)]
 #![no_main]
 
-#[no_mangle]
-fn main() {
-	0;
-}
-
 use core::panic::PanicInfo;
 
-#[no_mangle]
 #[panic_handler]
 fn panic(_info: &PanicInfo) -> ! {
     loop {}
+}
+
+#[start]
+#[no_mangle]
+pub extern "C" fn _start(_argc: i32, _argv: *const *const u8) -> i32 {
+    0
 }
