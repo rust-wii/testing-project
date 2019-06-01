@@ -1,6 +1,6 @@
 {
     "arch": "powerpc",
-    "data-layout": "E-m:e-p:32:32-i64:64-n32",
+    "data-layout": "n32-p:32:32-E",
     "dynamic-linking": false,
     "env": "rvl",
     "executables": true,
@@ -11,8 +11,7 @@
     "llvm-target": "powerpc-unknown-eabi",
     "max-atomic-width": 32,
     "os": "none",
-    "position-independent-executables": false,
-    "relro-level": "full",
+    "position-independent-executables": true,
     "target-c-int-width": "32",
     "target-endian": "big",
     "target-family": "unix",
