@@ -8,8 +8,6 @@ edition = "2018"
 name = "rust-wii"
 path = "src/main.rs"
 
-[dependencies]
-
 [profile.dev]
 lto = true
 panic = "abort"

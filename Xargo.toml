@@ -4,8 +4,13 @@ stage = 0
 [dependencies.alloc]
 stage = 1
 
-# [dependencies.libc]
-# git = "https://github.com/rust-wii/libc.git"
-# stage = 2
-# default-features = false
-# features = ["align", "rustc-dep-of-std"] 
+[dependencies.libc]
+git = "https://github.com/rust-wii/libc.git"
+branch = "wii"
+stage = 2
+default-features = false
+features = ["align", "rustc-dep-of-std"] 
+
+[dependencies.mllib-sys]
+git = "https://github.com/rust-wii/mllib-sys.git"
+stage = 3
