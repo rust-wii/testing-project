@@ -7,15 +7,10 @@
     "has-elf-tls": false,
     "has-rpath": true,
     "llvm-target": "powerpc-unknown-eabi",
-    "linker": "powerpc-eabi-ld",
-    "linker-flavor": "ld",
+    "linker": "powerpc-eabi-gcc",
+    "linker-flavor": "gcc",
     "linker-is-gnu": true,
     "os": "none",
-    "pre-link-args": {
-        "ld": [
-            "-Trvl.ld"
-        ]
-    },
     "pre-link-flags": [
         "-mrvl",
         "-meabi",
