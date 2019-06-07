@@ -1,5 +1,4 @@
 #![no_std]
-#![feature(rustc_private)]
 #![no_main]
 
 extern crate mllib_sys;
