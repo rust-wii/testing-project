@@ -1,1 +1,8 @@
 [dependencies.alloc]
+stage = 0
+
+[dependencies.std]
+git = "https://github.com/rust-wii/rust.git"
+branch = "wii"
+stage = 1
+default-features = false

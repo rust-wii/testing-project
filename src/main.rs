@@ -1,27 +1,19 @@
-#![no_std]
-#![no_main]
+#![feature(start)]
 
-extern crate mllib_sys;
-
-use core::panic::PanicInfo;
 use mllib_sys::{ML_Init, ML_SplashScreen, ML_Refresh};
 
-#[panic_handler]
-fn panic(_info: &PanicInfo) -> ! {
-    loop {}
-}
+#[start]
+fn main(_argc: isize, _argv: *const *const u8) -> isize {
+    let mut vec: Vec<i32> = Vec::new();
+    vec.push(5);
+    vec.push(7);
 
-#[no_mangle]
-pub extern "C" fn main(_argc: i32, _argv: *const *const u8) -> i32 {
-	unsafe{
-		ML_Init();
-		ML_SplashScreen();
-		
-		loop {
-			ML_Refresh();
-		}
-	}
-	
-	0	
+    unsafe {
+        ML_Init();
+        ML_SplashScreen();
 
+        loop {
+            ML_Refresh();
+        }
+    }
 }

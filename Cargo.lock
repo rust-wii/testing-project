@@ -8,7 +8,7 @@ source = "git+https://github.com/rust-wii/libc.git?branch=wii#172289d8db97f950f2
 [[package]]
 name = "mllib-sys"
 version = "0.1.0"
-source = "git+https://github.com/rust-wii/mllib-sys.git#f15bc06fcd44120dd0701309ec29d1efc9e95684"
+source = "git+https://github.com/rust-wii/mllib-sys.git#31b99ad9f7f7164a18236f6667d21b9e742c5d31"
 dependencies = [
  "libc 0.2.56 (git+https://github.com/rust-wii/libc.git?branch=wii)",
 ]

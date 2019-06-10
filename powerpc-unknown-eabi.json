@@ -10,9 +10,10 @@
     "linker": "powerpc-eabi-gcc",
     "linker-flavor": "gcc",
     "linker-is-gnu": true,
-    "os": "none",
+    "os": "rvl-ios",
     "pre-link-args": {
         "gcc": [
+            "-DGEKKO",
             "-mrvl",
             "-meabi",
             "-mhard-float"
