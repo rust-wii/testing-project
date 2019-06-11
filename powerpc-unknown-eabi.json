@@ -13,7 +13,6 @@
     "os": "rvl-ios",
     "pre-link-args": {
         "gcc": [
-            "-DGEKKO",
             "-mrvl",
             "-meabi",
             "-mhard-float"
