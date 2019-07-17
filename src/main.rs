@@ -1,19 +1,36 @@
 #![feature(start)]
 
-use mllib_sys::{ML_Init, ML_SplashScreen, ML_Refresh};
+use ogc::{print, println, video::Video};
 
 #[start]
 fn main(_argc: isize, _argv: *const *const u8) -> isize {
-    let mut vec: Vec<i32> = Vec::new();
-    vec.push(5);
-    vec.push(7);
+    // Initialise the video system
+    let video = Video::init();
 
-    unsafe {
-        ML_Init();
-        ML_SplashScreen();
+    // Initialise the console, required for print.
+    Console::init(&video);
 
-        loop {
-            ML_Refresh();
-        }
+    // Set up the video registers with the chosen mode.
+    Video::configure(video.render_config.into());
+
+    // Tell the video hardware where our display memory is.
+    Video::set_next_framebuffer(video.framebuffer);
+
+    // Make the display visible.
+    Video::set_black(false);
+
+    // Flush the video register changes to the hardware.
+    Video::flush();
+
+    // Wait for Video setup to complete.
+    Video::wait_vsync();
+
+    // Debugging
+    let vec = vec![2, 3, 4, 5, 6, 7];
+    println!("Vector: {:?}", vec);
+
+    loop {
+        // Wait for the next frame.
+        Video::wait_vsync();
     }
 }
