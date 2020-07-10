@@ -2,109 +2,59 @@
 # It is not intended for manual editing.
 [[package]]
 name = "autocfg"
-version = "0.1.5"
+version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f8aac770f1885fd7e387acedd76065302551364496e46b3dd00860b2f8359b9d"
 
 [[package]]
 name = "bitflags"
-version = "1.1.0"
+version = "1.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cf1de2fe8c75bc145a2f577add951f8134889b4795d47466a54a5c846d691693"
 
 [[package]]
-name = "enum-primitive-derive"
-version = "0.1.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
+name = "enum_primitive"
+version = "0.1.1"
+source = "git+https://github.com/FrictionlessPortals/enum_primitive-rs.git#a069484e4292ab5b9e5fe899368f5b7b2903e454"
 dependencies = [
- "num-traits 0.1.43 (registry+https://github.com/rust-lang/crates.io-index)",
- "quote 0.3.15 (registry+https://github.com/rust-lang/crates.io-index)",
- "syn 0.11.11 (registry+https://github.com/rust-lang/crates.io-index)",
+ "num-traits",
 ]
 
 [[package]]
 name = "libc"
-version = "0.2.59"
-source = "git+https://github.com/rust-wii/libc.git?branch=wii#14a6ad4a595d85d185cacd498da95bb360337e0b"
+version = "0.2.61"
+source = "git+https://github.com/rust-wii/libc.git?branch=wii#9eeda009186d9f8fe70a7031e471b34f8c3734e8"
 
 [[package]]
 name = "num-traits"
-version = "0.1.43"
+version = "0.2.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ac267bcc07f48ee5f8935ab0d24f316fb722d7a1292e2913f0cc196b29ffd611"
 dependencies = [
- "num-traits 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
-name = "num-traits"
-version = "0.2.8"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-dependencies = [
- "autocfg 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)",
+ "autocfg",
 ]
 
 [[package]]
 name = "ogc-rs"
-version = "0.5.0"
-source = "git+https://github.com/rust-wii/ogc-rs.git#37c48c68e8b6d659ac6d95fbf7db41957177aecd"
+version = "0.7.0"
+source = "git+https://github.com/rust-wii/ogc-rs.git#aa7896126edb73750b171aecb16554c77bdfbcfa"
 dependencies = [
- "bitflags 1.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "enum-primitive-derive 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "num-traits 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
- "ogc-sys 0.2.0 (git+https://github.com/rust-wii/ogc-rs.git)",
+ "bitflags",
+ "enum_primitive",
+ "ogc-sys",
 ]
 
 [[package]]
 name = "ogc-sys"
-version = "0.2.0"
-source = "git+https://github.com/rust-wii/ogc-rs.git#37c48c68e8b6d659ac6d95fbf7db41957177aecd"
+version = "0.3.0"
+source = "git+https://github.com/rust-wii/ogc-rs.git#aa7896126edb73750b171aecb16554c77bdfbcfa"
 dependencies = [
- "libc 0.2.59 (git+https://github.com/rust-wii/libc.git?branch=wii)",
+ "libc",
 ]
-
-[[package]]
-name = "quote"
-version = "0.3.15"
-source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "rust-wii"
 version = "0.1.0"
 dependencies = [
- "ogc-rs 0.5.0 (git+https://github.com/rust-wii/ogc-rs.git)",
+ "ogc-rs",
 ]
-
-[[package]]
-name = "syn"
-version = "0.11.11"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-dependencies = [
- "quote 0.3.15 (registry+https://github.com/rust-lang/crates.io-index)",
- "synom 0.11.3 (registry+https://github.com/rust-lang/crates.io-index)",
- "unicode-xid 0.0.4 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
-name = "synom"
-version = "0.11.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-dependencies = [
- "unicode-xid 0.0.4 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
-name = "unicode-xid"
-version = "0.0.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-
-[metadata]
-"checksum autocfg 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)" = "22130e92352b948e7e82a49cdb0aa94f2211761117f29e052dd397c1ac33542b"
-"checksum bitflags 1.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "3d155346769a6855b86399e9bc3814ab343cd3d62c7e985113d46a0ec3c281fd"
-"checksum enum-primitive-derive 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)" = "e2b90e520ec62c1864c8c78d637acbfe8baf5f63240f2fb8165b8325c07812dd"
-"checksum libc 0.2.59 (git+https://github.com/rust-wii/libc.git?branch=wii)" = "<none>"
-"checksum num-traits 0.1.43 (registry+https://github.com/rust-lang/crates.io-index)" = "92e5113e9fd4cc14ded8e499429f396a20f98c772a47cc8622a736e1ec843c31"
-"checksum num-traits 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)" = "6ba9a427cfca2be13aa6f6403b0b7e7368fe982bfa16fccc450ce74c46cd9b32"
-"checksum ogc-rs 0.5.0 (git+https://github.com/rust-wii/ogc-rs.git)" = "<none>"
-"checksum ogc-sys 0.2.0 (git+https://github.com/rust-wii/ogc-rs.git)" = "<none>"
-"checksum quote 0.3.15 (registry+https://github.com/rust-lang/crates.io-index)" = "7a6e920b65c65f10b2ae65c831a81a073a89edd28c7cce89475bff467ab4167a"
-"checksum syn 0.11.11 (registry+https://github.com/rust-lang/crates.io-index)" = "d3b891b9015c88c576343b9b3e41c2c11a51c219ef067b264bd9c8aa9b441dad"
-"checksum synom 0.11.3 (registry+https://github.com/rust-lang/crates.io-index)" = "a393066ed9010ebaed60b9eafa373d4b1baac186dd7e008555b0f702b51945b6"
-"checksum unicode-xid 0.0.4 (registry+https://github.com/rust-lang/crates.io-index)" = "8c1f860d7d29cf02cb2f3f359fd35991af3d30bac52c57d265a3c461074cb4dc"

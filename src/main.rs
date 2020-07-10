@@ -1,6 +1,8 @@
+#![no_std]
 #![feature(start)]
 
-use ogc::{print, println, video::Video};
+extern crate alloc;
+use ogc::prelude::*;
 
 #[start]
 fn main(_argc: isize, _argv: *const *const u8) -> isize {
