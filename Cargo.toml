@@ -14,10 +14,5 @@ panic = "abort"
 [profile.release]
 panic = "abort"
 
-[package.metadata.cargo-xbuild]
-memcpy = true
-sysroot_path = "target/sysroot"
-panic_immediate_abort = true
-
 [dependencies.ogc-rs]
 git = "https://github.com/rust-wii/ogc-rs.git"
