@@ -3,7 +3,6 @@ name = "rust-wii"
 version = "0.1.0"
 authors = ["rust-wii"]
 edition = "2018"
-build = "build.rs"
 
 [[bin]]
 name = "rust-wii"
